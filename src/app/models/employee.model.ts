@@ -3,7 +3,7 @@ export class Employee {
   name: string;
   gender: string;
   email?: string;
-  phonenumber?: string;
+  phonenumber?: number;
   contactPreference: string;
   dateOfBirth: Date;
   department: string;
