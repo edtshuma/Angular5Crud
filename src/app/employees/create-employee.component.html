@@ -5,20 +5,20 @@
     </div>
 
     <div class="panel-body">
-      <div class="form-group">
-        <label for="fullName">Full Name</label>
+      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+        <label class="control-label" for="fullName">Full Name</label>
         <input required id="fullName"   name="fullName"  [(ngModel)]="fullName"   type="text"
-          class="form-control"/>
+          class="form-control" #fullNameControl="ngModel"/>
+          <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched">
+            Full name is required
+          </span>
       </div>
-<div>touched : {{employeeForm.touched}}</div>
-<div>untouched : {{employeeForm.untouched}}</div>
-<div>pristine : {{employeeForm.untouched}}</div>
-<div>dirty : {{employeeForm.untouched}}</div>
-<div>valid : {{employeeForm.untouched}}</div>
-<div>invalid : {{employeeForm.untouched}}</div>
+
+
       <div class="form-group">
         <label for="email">Email</label>
         <input id="email" name="email" [(ngModel)]="email" type="text" class="form-control"   />
+
       </div>
       <div class="form-group">
         <label for="phoneNumber">Phone Number</label>
