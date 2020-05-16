@@ -9,11 +9,11 @@ import { NgForm } from '@angular/forms';
 export class CreateEmployeeComponent implements OnInit {
 
   constructor() { }
-isActive = 'true';
+department = '3';
   ngOnInit() {
   }
 saveEmployee(empForm: NgForm): void {
 
-  console.log(empForm);
+  console.log(empForm.value);
 }
 }
