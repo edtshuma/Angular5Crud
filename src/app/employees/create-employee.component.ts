@@ -7,7 +7,7 @@ import {Department} from '../models/department.model';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
-
+previewPhoto: false;
   departments: Department [] = [
     {id: 1, name: 'Help Desk'},
     {id: 2, name: 'IT'},
@@ -15,6 +15,10 @@ export class CreateEmployeeComponent implements OnInit {
     {id: 4, name: 'Marketing'}
   ];
   constructor() { }
+
+  togglePhotoPreview() {
+    this.previewPhoto = !this.previewPhoto;
+  }
 
   ngOnInit() {
   }

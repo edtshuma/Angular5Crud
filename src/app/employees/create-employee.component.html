@@ -74,6 +74,23 @@
 
                     </select>
                     </div>
+                    <div class="form-group">
+                      <label for="dateOfBirth">Date of Birth</label>
+                      <input id="dateOfBirth" name="dateOfBirth" [(ngModel)]="dateOfBirth" type="date" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="photoPath">Photo Path</label>
+                          <input id="photoPath" name="photoPath" [(ngModel)]="photoPath" type="text" class="form-control"/>
+                            </div>
+
+                            <div class="form-group">
+                              <button (click)="togglePhotoPreview()" class="btn btn-primary"> Show Preview</button>
+                                </div>
+                            <div class="form-group">
+                              <img  [src]="photoPath" height="200" width="200" *ngIf="previewPhoto"/>
+
+                                </div>
 
   </div>
   <div class="panel-footer">
