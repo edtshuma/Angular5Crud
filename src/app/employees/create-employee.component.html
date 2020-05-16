@@ -5,7 +5,7 @@
     </div>
 
     <div class="panel-body">
-      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched" [class.has-success]="fullNameControl.valid">
         <label class="control-label" for="fullName">Full Name</label>
         <input required id="fullName"   name="fullName"  [(ngModel)]="fullName"   type="text"
           class="form-control" #fullNameControl="ngModel"/>
