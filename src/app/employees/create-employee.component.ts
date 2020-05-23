@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {Department} from '../models/department.model';
+
+
 @Component({
   selector: 'app-create-employee',
   templateUrl: './create-employee.component.html',
@@ -20,9 +22,9 @@ export class CreateEmployeeComponent implements OnInit {
   ngOnInit() {
   }
 
-  togglePhotoPreview() {
-    this.previewPhoto = !this.previewPhoto;
-  }
+ /*togglePhotoPreview() {
+   this.previewPhoto = !this.previewPhoto;
+  }*/
 
 
 saveEmployee(empForm: NgForm): void {

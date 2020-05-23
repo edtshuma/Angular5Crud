@@ -26,8 +26,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     BsDatepickerModule.forRoot(),
+    RouterModule.forRoot(appRoutes),
     FormsModule
 
   ],
